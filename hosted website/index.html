@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Generate assignment front pages and download as PDF for GM University.">
+  <title>Assignment Front Page Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- PDF download support -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+ 
+<p style="text-align: center; font-size: 14px; color: #555;">
+  Fill in your details and click "Generate Front Page" → then "Download as PDF".
+</p>
+
+<div class="form-container">
+  <h2>Assignment Front Page Generator</h2>
+  
+ 
+
+  <input type="text" id="studentName" placeholder="Enter Student Name" />
+  <input type="text" id="usn" placeholder="Enter USN" />
+  <input type="text" id="section" placeholder="Enter Section" />
+  <input type="number" id="assignmentNo" placeholder="Enter Assignment Number" />
+
+  <select id="topicType">
+    <option value="Case study">Case study</option>
+    <option value="Topic">Topic</option>
+  </select>
+
+  <textarea id="topic" placeholder="Enter Topic/Case Study"></textarea>
+
+  <select id="subject">
+    <option value="Applied Mathematics for computer science (UE24CS1201)">Applied Mathematics for computer science (UE24CS1201)</option>
+    <option value="Applied Physics for CSE (UE24SC1202)">Applied Physics for CSE (UE24SC1202)</option>
+    <option value="Data Structures & Application (UE24CS1203)">Data Structures & Application (UE24CS1203)</option>
+    <option value="Python Programming (UE24CS1204)">Python Programming (UE24CS1204)</option>
+    <option value="Fundamentals of Computer Networks (UE24CS1205)">Fundamentals of Computer Networks (UE24CS1205)</option>
+    <option value="Fundamentals of Database Management System (UE24CS1206)">Fundamentals of Database Management system (UE24CS1206)</option>
+
+  </select>
+  <input type="text" id="department" placeholder="Enter Department (e.g., ISE, CSE)" />
+
+  <input type="text" id="teacherName" placeholder="Enter Teacher's Name" />
+
+  <button onclick="generateFrontPage()">Generate Front Page</button>
+  <button onclick="downloadPdf()" id="downloadButton" style="display:none;">Download as PDF</button>
+
+  <div style="text-align: center; margin-top: 30px; font-size: 12px; color: #555;">
+    <p style="display: inline-flex; align-items: center; gap: 8px;">
+      Designed & Developed by
+
+      <img src="https://i.postimg.cc/Nf2rcbQv/sai.jpg" alt="Designer Photo" style="width: 30px; height: 50px; border-radius: 100%; object-fit: cover;" />
+      <strong>Shankar Sai N</strong> – ISE, Data Science
+    </p>
+    
+  </div>
+
+  <div id="frontPage" class="a4-page" style="display:none;"></div>
+  
+
+<!-- Visitor Counter Start -->
+<div style="text-align: center; margin-top: 8px;">
+  <div id="sfctlu2s8kk4tyjlzk79e9ed8tgdqwfyky3"></div>
+  <script type="text/javascript" src="https://counter4.optistats.ovh/private/counter.js?c=tlu2s8kk4tyjlzk79e9ed8tgdqwfyky3&down=async" async></script>
+  <noscript>
+    <a href="https://www.freecounterstat.com" title="hit counters">
+      <img src="https://counter4.optistats.ovh/private/freecounterstat.php?c=tlu2s8kk4tyjlzk79e9ed8tgdqwfyky3" border="0" title="hit counters" alt="hit counters">
+      <img src="https://counter4.optistats.ovh/private/freecounterstat.php?c=tlu2s8kk4tyjlzk79e9ed8tgdqwfyky3" border="0" title="hit counters" alt="hit counters"
+           style="width:50px; height:auto;">
+    </a>
+  </noscript>
+  <span style="font-size:10px; color:#888;">Visitor Count</span>
+</div>
+<!-- Visitor Counter End -->
+
+</body>
+</html>
+
+
+  
